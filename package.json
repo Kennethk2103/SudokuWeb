@@ -1,0 +1,9 @@
+{
+  "name": "sudoku-web",
+  "version": "0.0.0",
+  "description": "SudokuWeb",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}

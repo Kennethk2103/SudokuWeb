@@ -1,0 +1,3 @@
+C:\Users\Kenny\source\repos\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.njsproj.AssemblyReference.cache
+C:\Users\Kenny\source\repos\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.njsproj.CoreCompileInputs.cache
+C:\Users\Kenny\source\repos\SudokuWeb\SudokuWeb\bin\Microsoft.NodejsTools.WebRole.dll

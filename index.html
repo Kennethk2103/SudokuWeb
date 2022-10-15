@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Sudoku</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3b99721901.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="StyleSheet1.css">
+</head>
+<body">
+    <div id="Heading">
+        <h1>Kennys Sudoku Website</h1>
+        <section id="Buttons">
+            <div class="ButtonsBar">
+                <button id="Easy" type="button" class="btn btn-lg btn-dark easyBtn">Easy</button>
+
+                <button id="Normal" type="button" class="btn btn-lg btn-dark normalBtn">Normal</button>
+
+                <button id="Hard" type="button" class="btn btn-lg btn-dark Hardbtn">Hard</button>
+                <button type="button" id="Check" class="btn btn-dark btn-lg">Check</button>
+
+            </div>
+
+        </section>
+    </div>
+   
+    <div id="Board">
+        <div class="boardClass" id="numBoard">
+            <!-- Not a good solution, just to get working-->
+            <table class="arrayBoard">
+                <tr>
+                    <td id="cell00">1</td>
+                    <td id="cell01">2</td>
+                    <td id="cell02">3</td>
+                    <td id="cell03">4</td>
+                    <td id="cell04">5</td>
+                    <td id="cell05">6</td>
+                    <td id="cell06">7</td>
+                    <td id="cell07">8</td>
+                    <td id="cell08">9</td>
+
+
+                </tr>
+                <tr>
+                    <td id="cell10">2</td>
+                    <td id="cell11"> </td>
+                    <td id="cell12"> </td>
+                    <td id="cell13"> </td>
+                    <td id="cell14"> </td>
+                    <td id="cell15"> </td>
+                    <td id="cell16"> </td>
+                    <td id="cell17"> </td>
+                    <td id="cell18">8</td>
+
+
+                </tr>
+                <tr>
+                    <td id="cell20">3</td>
+                    <td id="cell21"></td>
+                    <td id="cell22"></td>
+                    <td id="cell23"></td>
+                    <td id="cell24"></td>
+                    <td id="cell25"></td>
+                    <td id="cell26"></td>
+                    <td id="cell27"></td>
+                    <td id="cell28">7</td>
+
+
+                </tr>
+                <tr>
+                    <td id="cell30">4</td>
+                    <td id="cell31"></td>
+                    <td id="cell32"></td>
+                    <td id="cell33"></td>
+                    <td id="cell34"></td>
+                    <td id="cell35"></td>
+                    <td id="cell36"></td>
+                    <td id="cell37"></td>
+                    <td id="cell38">6</td>
+
+
+                </tr>
+                <tr>
+                    <td id="cell40">5</td>
+                    <td id="cell41"></td>
+                    <td id="cell42"></td>
+                    <td id="cell43"></td>
+                    <td id="cell44"></td>
+                    <td id="cell45"></td>
+                    <td id="cell46"></td>
+                    <td id="cell47"></td>
+                    <td id="cell48">5</td>
+
+
+                </tr>
+                <tr>
+                    <td id="cell50">6</td>
+                    <td id="cell51"></td>
+                    <td id="cell52"></td>
+                    <td id="cell53"></td>
+                    <td id="cell54"></td>
+                    <td id="cell55"></td>
+                    <td id="cell56"></td>
+                    <td id="cell57"></td>
+                    <td id="cell58">4</td>
+
+
+                </tr>
+                <tr>
+                    <td id="cell60">7</td>
+                    <td id="cell61"></td>
+                    <td id="cell62"></td>
+                    <td id="cell63"></td>
+                    <td id="cell64"></td>
+                    <td id="cell65"></td>
+                    <td id="cell66"></td>
+                    <td id="cell67"></td>
+                    <td id="cell68">3</td>
+
+
+                </tr>
+                <tr>
+                    <td id="cell70">8</td>
+                    <td id="cell71"> </td>
+                    <td id="cell72"> </td>
+                    <td id="cell73"> </td>
+                    <td id="cell74"> </td>
+                    <td id="cell75"> </td>
+                    <td id="cell76"> </td>
+                    <td id="cell77"></td>
+                    <td id="cell78">2</td>
+
+
+                </tr>
+                <tr id="EndofTable">
+                    <td id="cell80">9</td>
+                    <td id="cell81">8</td>
+                    <td id="cell82">7</td>
+                    <td id="cell83">6</td>
+                    <td id="cell84">5</td>
+                    <td id="cell85">4</td>
+                    <td id="cell86">3</td>
+                    <td id="cell87">2</td>
+                    <td id="cell88">1</td>
+
+
+                </tr>
+            </table>
+
+        </div>
+    </div>
+ 
+
+
+    <script src="index.js" charset="utf-8"></script>
+
+    </body>
+</html>
