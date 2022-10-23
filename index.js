@@ -71,7 +71,6 @@ function check(gameBoard, row, col, num) {
         for (var temp3 = Math.floor(col / 3) * 3; temp3 < Math.floor(col / 3) * 3 + 3 ; temp3++) {
 
         
-
             if (gameBoard[temp2][temp3] == num) {
                 return false;
             }
