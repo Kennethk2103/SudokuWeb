@@ -1,40 +1,46 @@
 var document = "index.html"
 
-const hard = document.getElementById("Hard");
 
-hard.addEventListener("click", function () {
+
+
+$("#Hard").click(function () {
     board(50);
-});
-const normal = document.getElementById("Normal");
-normal.addEventListener("click", function () {
+})
+
+
+$("#Normal").click(function () {
     board(35);
-});
-const easy = document.getElementById("Easy");
-easy.addEventListener("click", function () {
+
+})
+
+$("#Easy").click(function () {
     board(20);
-});
-const checkEvent = document.getElementById("Check");
-checkEvent.addEventListener("click", function () {
+})
+
+$("#Check").click(function () {
     checkBoard();
-});
+})
+
+
 
 
 
 function board(dificultyNumber) {
+    $("#output").text("");
     var gameBoard = createboard(dificultyNumber);
-
     for (let i = 0; i < gameBoard.length; i++) {
         for (let j = 0; j < gameBoard[0].length; j++) {
             var num = gameBoard[i][j];
             
             if (num != 0) {
-                document.getElementById("cell" + i + j).innerHTML = num.toString();
-                document.getElementById("cell" + i + j).contentEditable = false;
+                $("#cell" + i + j).text(num.toString());
+                $("#cell" + i + j).attr('contenteditable', 'false');
+
+
             }
             else {
-
-                document.getElementById("cell" + i + j).innerHTML = " ";
-                document.getElementById("cell" + i + j).contentEditable = true;
+                $("#cell" + i + j).text(" ");
+                $("#cell" + i + j).attr('contenteditable', 'true');
             }
         }
     }
@@ -94,9 +100,6 @@ function checkFinal(gameBoard, row, col) {
             if (gameBoard[temp2][temp3] == undefined) {
                 return false;
             }
-
-
-        
         }
     }
     if (instances == 1) {
@@ -112,19 +115,31 @@ function checkBoard() {
     for (let i = 0; i < 9; i++) {
         gameBoard[i] = [];
         for (let j = 0; j < 9; j++) {
-            gameBoard[i][j] = document.getElementById("cell" + i + j).innerHTML;
+            gameBoard[i][j] = $("#cell" +i+j).text();
             
         }
     }
     for (let i = 0; i < 9; i++) {
         for (let j = 0; j < 9; j++) {
             if (checkFinal(gameBoard, i, j) == false) {
-                alert("Incorrect");
+                $("#output").text("Incorrect");
+                $("#output").css("color", "red");
+
+                var audio = new Audio("sounds/incorrect.mp3");
+                
+
+                audio.play();
+
                 return;
             }
         }
     }
-    alert("Correct");
+
+    $("#output").text("Correct");
+    var audio = new Audio("sounds/correct.mp3");
+    audio.play(CorrectMp3);
+
+    $("#output").css("color", "green");
 
 }
 
